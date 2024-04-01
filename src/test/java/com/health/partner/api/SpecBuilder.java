@@ -1,4 +1,4 @@
-package com.spotify.oath2.api;
+package com.health.partner.api;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -8,29 +8,14 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-import static com.spotify.oath2.api.Route.BASE_PATH;
-
 public class SpecBuilder {
 
     public static RequestSpecification getRequestSpec() {
         return new RequestSpecBuilder()
                 .setBaseUri(System.getProperty("BaseURI"))
-               // .setBaseUri("https://api.spotify.com")
-                .setBasePath(BASE_PATH)
+                .setBasePath(Route.BASE_PATH)
                 .addFilter(new AllureRestAssured())
                 .setContentType(ContentType.JSON).log(LogDetail.ALL)
-                .build();
-
-
-    }
-
-    public static RequestSpecification getAccountRequestSpec() {
-        return new RequestSpecBuilder()
-                .setBaseUri(System.getProperty("Account_BaseURI"))
-               // .setBaseUri("https://accounts.spotify.com")
-                .setContentType(ContentType.URLENC)
-                .addFilter(new AllureRestAssured())
-                .log(LogDetail.ALL)
                 .build();
 
 

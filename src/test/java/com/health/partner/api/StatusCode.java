@@ -1,4 +1,4 @@
-package com.spotify.oath2.api;
+package com.health.partner.api;
 
 public enum StatusCode {
     CODE_200(200, ""),

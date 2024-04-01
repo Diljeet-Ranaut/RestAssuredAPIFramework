@@ -1,4 +1,4 @@
-package com.spotify.oath2.utils;
+package com.health.partner.utils;
 
 import java.util.Properties;
 
@@ -19,22 +19,21 @@ public class DataLoader {
         return configLoader;
     }
 
-    public String getPlaylist_id() {
-        String prop = properties.getProperty("get_playlist_id");
+    public String getPractitioner_slot_endPoint() {
+        String prop = properties.getProperty("practitioner_slot_endPoint");
         if (prop != null) {
             return prop;
         } else {
-            throw new RuntimeException("Property get_playlist_id not found in Config.properties file");
+            throw new RuntimeException("Property practitioner_slot_endPoint  not found in Config.properties file");
         }
     }
 
-    public String getUpdate_playlist_id() {
-        String prop = properties.getProperty("update_playlist_id");
+    public String getSlot_Schema_Path() {
+        String prop = properties.getProperty("Slot_Schema_Path");
         if (prop != null) {
             return prop;
         } else {
-            throw new RuntimeException("Property update_playlist_id  not found in Config.properties file");
+            throw new RuntimeException("Property Slot_Schema_Path  not found in Config.properties file");
         }
     }
-
 }

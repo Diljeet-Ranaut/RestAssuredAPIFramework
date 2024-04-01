@@ -1,4 +1,4 @@
-package com.spotify.oath2.utils;
+package com.health.partner.utils;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

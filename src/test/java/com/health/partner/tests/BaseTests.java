@@ -1,4 +1,4 @@
-package com.spotify.oath2.tests;
+package com.health.partner.tests;
 
 import org.testng.annotations.BeforeMethod;
 
